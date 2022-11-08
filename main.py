@@ -5,10 +5,7 @@ import pandas as pd
 data = pd.read_excel('FlightFinder.xlsx')
 TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com/v2/search"
 TEQUILA_ENDPOINT2 = "https://api.tequila.kiwi.com/locations/query"
-TEQUILA_API_KEY = 'mFjwK4WhPYipRPIUiq8CXBQcImuyIS0N'
-
-#tomorrow = datetime.now() + timedelta(days=1)
-#six_month_from_today = datetime.now() + timedelta(days=(12 * 30))
+TEQUILA_API_KEY = YOUR API KEY
 
 format = "%Y-%m-%dT%H:%M:%S.000Z"
 headers = {'apikey': TEQUILA_API_KEY}
