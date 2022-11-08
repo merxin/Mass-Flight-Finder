@@ -1,4 +1,4 @@
 # Mass-Flight-Finder
 OOP, Pandas, API, tequila api
 
-Returns multiple flights based on the inputs provided in excel file
+Returns price and details for multiple flights based on the inputs provided in excel file
