@@ -10,26 +10,8 @@ TEQUILA_API_KEY = YOUR API KEY
 format = "%Y-%m-%dT%H:%M:%S.000Z"
 headers = {'apikey': TEQUILA_API_KEY}
 
-## dictionary for params query::
-# origin_city_code = 'WRO'
-# destination_city_code = 'NYC'
-# max_stopovers = 6
-# currency = 'PLN'
-# query={
-#     "fly_from": origin_city_code,
-#     "fly_to": destination_city_code,
-#     "date_from": date_from.strftime("%d/%m/%Y"),
-#     "date_to": date_to.strftime("%d/%m/%Y"),
-#     "nights_in_dst_from": 8,
-#     "nights_in_dst_to": 15,
-#     "flight_type": "round",
-#     "one_for_city": 1,
-#     "max_stopovers": max_stopovers,
-#     "curr": currency
-# }
-# print(query)
-
 class Iata:
+#searches for airport id using location API
     def __init__(self, city):
         self.city = city
 
@@ -41,11 +23,11 @@ class Iata:
         self.results = self.response.json()["locations"]
         #print(self.results)
         self.iAta = self.results[0]["code"]
-        #print(iAta)
         return self.iAta
 
 
 class Flights:
+""" uses search API to find the details of the cheapest flight for a particular pair of cities """
     def __init__(self, headers, query):
         self.headers = headers
         self.query = query
