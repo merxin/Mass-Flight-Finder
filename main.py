@@ -107,5 +107,5 @@ data.drop('nights_in_dst_to', inplace=True, axis=1)
 data.drop('one_for_city', inplace=True, axis=1)
 data.drop('max_stopovers', inplace=True, axis=1)
 data.to_excel('FlightFinder3.xlsx')
-#print(c.connecting_flights())
+
 
