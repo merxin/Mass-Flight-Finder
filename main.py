@@ -37,7 +37,7 @@ class Flights:
         self.connecting_flights = []
         #print("FlightSearch JSON",self.response.json())
         try:
-            for i in range (0, self.query['max_stopovers']*2):
+            for i in range (0, self.query['max_stopovers']*2+1):
                 self.route = self.response.json()['data'][0]['route'][i]['cityFrom'] + '-' + self.response.json()['data'][0]['route'][i]['cityTo']
                 self.time_of_departure=self.response.json()['data'][0]['route'][i]['local_departure']
                 self.time=(datetime.strptime(self.time_of_departure, format))
